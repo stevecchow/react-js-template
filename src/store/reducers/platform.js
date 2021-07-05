@@ -1,4 +1,3 @@
-/* eslint-disable import/no-anonymous-default-export */
 /**
  * 平台
  */
@@ -35,7 +34,7 @@ const DEFALT_STATE = {
   licence: {},
 };
 
-export default (state = DEFALT_STATE, action) => {
+const reducer = (state = DEFALT_STATE, action) => {
   let payload = action.payload;
   switch (action.type) {
     case actionTypes.PLATFORM_SET_STATE: {
@@ -73,3 +72,5 @@ export default (state = DEFALT_STATE, action) => {
       return state;
   }
 };
+
+export default reducer;

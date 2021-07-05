@@ -8,7 +8,7 @@ const actions = {
 };
 
 /**
- * 执行action
+ * 执行 action
  * @param {*} group
  * @param {*} name
  * @param {*} arg
