@@ -2,6 +2,14 @@ import asyncComponent from "@/utils/asyncComponent";
 
 const routers = [
   {
+    path: "/test",
+    component: asyncComponent(() => import("@/views/test")),
+  },
+  {
+    path: "/icon",
+    component: asyncComponent(() => import("@/views/icon")),
+  },
+  {
     path: "./page",
     redirect: true,
     component: asyncComponent(() => import("@/views/layout")),
@@ -21,14 +29,6 @@ const routers = [
         meta: { name: "手动标签" },
       },
     ],
-  },
-  {
-    path: "/test",
-    component: asyncComponent(() => import("@/views/test")),
-  },
-  {
-    path: "/icon",
-    component: asyncComponent(() => import("@/views/icon")),
   },
 ];
 
