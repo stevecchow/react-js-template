@@ -1,7 +1,5 @@
 const history = require("history").createHashHistory();
 
-export default history;
-
 let stackList = [];
 
 window.stackList = stackList;
@@ -38,3 +36,5 @@ export const goBack = () => {
     gotoPage("/page/home");
   }
 };
+
+export default history;
