@@ -13,7 +13,7 @@ const store = createStore(
 export default store;
 
 /**
- * 执行 action，替代 mapDispatchToProps 方法
+ * 执行 action
  * @param {*} group
  * @param {*} name
  * @param {*} arg
@@ -35,10 +35,10 @@ export function doAction(group, name, arg = []) {
 }
 
 /**
- * 直接获取 store 的值
- * @param {*} group
- * @param {*} name
- * @returns
+ * 获取 store 的值
+ * @param {*} group 
+ * @param {*} name 
+ * @returns 
  */
 export function getStoreState(group, name) {
   return store.getState()[group][name];
@@ -46,7 +46,7 @@ export function getStoreState(group, name) {
 
 /**
  * 暴露 actions
- * @returns
+ * @returns 
  */
 export const getActions = function () {
   return actions;

@@ -1,6 +1,3 @@
-/**
- *
- */
 import actionTypes from "../action_types";
 
 const DEFALT_STATE = {

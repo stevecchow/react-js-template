@@ -1,7 +1,8 @@
 /**
  * 平台
  */
-import actionTypes from "../actions_types";
+// import actionTypes from "../actions_types";
+import actionTypes from "../action_types"
 
 const DEFALT_STATE = {
   // 当前路由信息对象

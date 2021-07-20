@@ -1,4 +1,4 @@
-import actionTypes from "@/store/action_types";
+import actionTypes from "../../store/action_types";
 
 /**
  * 设置顶层状态（会全覆盖，非extend）
