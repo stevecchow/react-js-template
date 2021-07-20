@@ -1,4 +1,4 @@
-import asyncComponent from "@/utils/async_component";
+import asyncComponent from "@/utils/asyncComponent";
 
 const routers = [
   {
