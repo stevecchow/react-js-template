@@ -1,6 +1,7 @@
 {
-  "name": "react-js-template",
-  "version": "0.1.0",
+  "name": "{{projectName}}",
+  "version": "{{projectVersion}}",
+  "description": "{{projectDescription}}",
   "private": true,
   "dependencies": {
     "@ant-design/icons": "4.0.0",
