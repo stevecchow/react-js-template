@@ -1,4 +1,6 @@
+{{#if useAntd}}
 @import '~antd/dist/antd.css';
+{{/if}}
 
 .App {
   text-align: center;
