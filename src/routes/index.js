@@ -1,7 +1,5 @@
 import React from "react";
 import { Route, Redirect, Switch } from "react-router-dom";
-import Home from "../views/Home";
-import Test from "../views/Test";
 import history from "./history";
 // import _ from "underscore";
 
@@ -34,11 +32,6 @@ const AppRoutes = (props) => {
       })}
       {redirectRoute ? <Redirect to={redirectRoute.path} /> : null}
     </Switch>
-    // <Switch>
-    //   <Route path="/home" component={Home} />
-    //   <Route path="/test" component={Test} />
-    // </Switch>
-    // <h1>hello</h1>
   );
 };
 

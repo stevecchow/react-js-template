@@ -35,6 +35,6 @@ const routers = [
     component: asyncComponent(() => import("@/views/404")),
   },
 ];
-console.log(routers);
+// console.log(routers);
 
 export default routers;

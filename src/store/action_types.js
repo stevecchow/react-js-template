@@ -21,6 +21,6 @@ const ACTION_TYPES = TYPE_ARR.reduce((prev, cur) => {
   return prev;
 }, {});
 
-console.log("ACTION_TYPES >>> ", ACTION_TYPES);
+// console.log("ACTION_TYPES >>> ", ACTION_TYPES);
 
 export default ACTION_TYPES;

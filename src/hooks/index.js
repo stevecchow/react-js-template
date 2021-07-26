@@ -1,6 +1,7 @@
 /**
  * 用户自定义react Hooks
  */
+// eslint-disable-next-line no-unused-vars
 import React, { useState, useEffect, useRef } from "react";
 import $ from "jquery";
 import { MENU_LIST } from "@/config";
@@ -225,6 +226,7 @@ export const useDebounce = (fn, ms = 30, deps = []) => {
   let timeout = useRef().current;
   useEffect(() => {
     if (timeout) clearTimeout(timeout);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     timeout = setTimeout(() => {
       fn();
     }, ms);
@@ -236,4 +238,23 @@ export const useDebounce = (fn, ms = 30, deps = []) => {
   };
 
   return [cancel];
+};
+
+// 自定义 useState，支持 state 修改完后的 callback 函数
+export const useMyState = (initState) => {
+  const [state, setState] = useState(initState);
+  let isUpdate = useRef();
+  const setXState = (state, cb) => {
+    setState((prev) => {
+      isUpdate.current = cb;
+      return typeof state === "function" ? state(prev) : state;
+    });
+  };
+  useEffect(() => {
+    if (isUpdate.current) {
+      isUpdate.current();
+    }
+  });
+
+  return [state, setXState];
 };
